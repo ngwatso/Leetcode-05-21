@@ -90,3 +90,21 @@ def csAverageOfTopFive(scores):
     return results
 
     # ===============
+
+    def csMaxNumberOfLambdas(text):
+
+    myStr = "lambda"
+
+    counts = {}
+
+    for i in myStr:
+        if i in text:
+            counts[i] =+ text.count(i)
+        print('counts', counts)
+        
+    if counts["l"] == counts["a"]/2 and counts["l"] == counts["m"] and counts["l"] == counts["b"] and counts["l"] == counts["d"]:
+        
+        return counts["l"]
+        
+    else:
+        return 0
