@@ -58,3 +58,35 @@ class MyHashSet:
 # obj.add(key)
 # obj.remove(key)
 # param_3 = obj.contains(key)
+
+# ===============
+
+def csAverageOfTopFive(scores):
+    
+    import math
+    
+    students = {}
+
+    results = []
+
+    for i in scores:
+        if i[0] not in students:
+            students[i[0]] = []
+        students[i[0]].append(i[1])
+
+    for s in students:
+        s = students[s].sort()
+        
+    for j in students:
+        if len(students[j]) > 5:
+            students[j] = students[j][-5:]
+            
+    for t in students:
+        students[t] = math.floor(sum(students[t])/len(students[t]))
+        
+    for key, value in students.items():
+        results.append([key, value])
+        
+    return results
+
+    # ===============
